@@ -36,4 +36,8 @@ function renderBuilds() {
     `).join('');
 }
 
+// Run on initial page load
 document.addEventListener('DOMContentLoaded', renderBuilds);
+
+// Also run when navigating via SPA routing
+window.addEventListener('page-load', renderBuilds);
