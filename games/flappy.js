@@ -5,7 +5,7 @@ window.loadFlappy = function (el, autoStart = true) {
     el.innerHTML = `
         <div class="game-container glass-card" style="background: rgba(10, 10, 20, 0.95); padding: 20px; border-radius: 20px; border: 1px solid rgba(139, 92, 246, 0.3);">
             <div class="game-instructions" style="margin-bottom: 10px; color: #a78bfa; font-family: 'Orbitron'; font-size: 0.8rem;">
-                CLICK OR SPACE TO FLAP THROUGH THE BEER PIPES!
+                🦇 FLAPPY DRAGON - Dodge the pipes and reach the nebula!
             </div>
             <div class="game-header" style="display: flex; justify-content: space-between; margin-bottom: 10px; font-family: 'Orbitron';">
                 <span style="color: #6366f1;">SCORE: <span id="flappy-score">0</span></span>

@@ -5,11 +5,11 @@ window.load2048 = function (el, autoStart = true) {
     el.innerHTML = `
         <div class="game-container glass-card" style="background: rgba(10, 10, 20, 0.95); padding: 20px; border-radius: 20px; border: 1px solid rgba(139, 92, 246, 0.3);">
             <div class="game-instructions" style="margin-bottom: 15px; color: #a78bfa; font-family: 'Orbitron'; font-size: 0.8rem;">
-                USE ARROW KEYS OR WASD TO MERGE BLOCKS
+                💎 DRAGON 2048 - Combine brews to reach the Golden Dragon!
             </div>
             <div class="game-header" style="display: flex; justify-content: space-between; margin-bottom: 15px; font-family: 'Orbitron'; font-size: 1.1rem;">
                 <span style="color: #6366f1;">SCORE: <span id="2048-score">0</span></span>
-                <span style="color: #ec4899;">MISSION: MERGE</span>
+                <span style="color: #ec4899;">ARROW KEYS / WASD</span>
             </div>
             <div id="grid-2048-container" style="position: relative; overflow: hidden; border-radius: 15px; border: 2px solid rgba(139, 92, 246, 0.3); padding: 10px; background: #020205; box-shadow: inset 0 0 20px rgba(139, 92, 246, 0.2);">
                 <div id="grid-2048" style="

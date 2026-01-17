@@ -5,11 +5,11 @@ window.loadPong = function (el, autoStart = true) {
     el.innerHTML = `
         <div class="game-container glass-card" style="background: rgba(10, 10, 20, 0.95); padding: 20px; border-radius: 20px; border: 1px solid rgba(139, 92, 246, 0.3);">
             <div class="game-instructions" style="margin-bottom: 10px; color: #a78bfa; font-family: 'Orbitron'; font-size: 0.8rem;">
-                USE LEFT/RIGHT ARROWS OR A/D TO CONTROL
+                🎾 BEER PONG GALAXY - Master the neon cosmic bounce!
             </div>
             <div class="game-header" style="display: flex; justify-content: space-between; margin-bottom: 10px; font-family: 'Orbitron'; font-size: 1.1rem;">
                 <span style="color: #6366f1;">SCORE: <span id="pong-score">0</span></span>
-                <span style="color: #ec4899;">MISSION: BOUNCE</span>
+                <span style="color: #ec4899;">LEFT / RIGHT / A / D</span>
             </div>
             <div style="position: relative; overflow: hidden; border-radius: 15px; border: 2px solid rgba(255,255,255,0.05);">
                 <canvas id="pong-canvas" width="400" height="500" style="background: #020205; display: block; margin: auto; cursor: none;"></canvas>

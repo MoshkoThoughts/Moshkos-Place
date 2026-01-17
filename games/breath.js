@@ -5,7 +5,7 @@ window.loadBreath = function (el, autoStart = true) {
     el.innerHTML = `
         <div class="game-container glass-card" style="background: rgba(10, 10, 20, 0.95); padding: 20px; border-radius: 20px; border: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 0 30px rgba(139, 92, 246, 0.1);">
             <div class="game-instructions" style="margin-bottom: 15px; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 10px; color: #a78bfa; font-size: 0.85rem; border-left: 3px solid #6366f1; font-family: 'Orbitron';">
-                A/D or MOUSE to move • SPACE or CLICK to fire
+                👾 DRAGON BREATH - Defend the brewery with cosmic fire! • A/D or MOUSE to move • SPACE or CLICK to fire
             </div>
             
             <div class="game-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding: 10px; background: rgba(0,0,0,0.4); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">

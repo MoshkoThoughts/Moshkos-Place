@@ -523,6 +523,8 @@ window.showGameCountdown = function (containerEl, onComplete) {
 
     let count = 3;
     countdownNumber.textContent = count;
+    countdownNumber.style.color = '#ff0000'; // Start with red
+    countdownNumber.style.textShadow = '0 0 30px #ff0000, 0 0 60px #ff0000, 0 0 90px #ff0000';
 
     const countdownInterval = setInterval(() => {
         count--;
@@ -532,11 +534,19 @@ window.showGameCountdown = function (containerEl, onComplete) {
             countdownNumber.offsetHeight; // Trigger reflow
             countdownNumber.style.animation = 'countdownPulse 0.5s ease-in-out';
 
-            // Change color as countdown progresses
-            if (count === 2) countdownNumber.style.color = '#ff00ea';
-            if (count === 1) countdownNumber.style.color = '#ffff00';
+            // Change color as countdown progresses: red -> orange -> yellow
+            if (count === 2) {
+                countdownNumber.style.color = '#ff8800';
+                countdownNumber.style.textShadow = '0 0 30px #ff8800, 0 0 60px #ff8800, 0 0 90px #ff8800';
+            }
+            if (count === 1) {
+                countdownNumber.style.color = '#ffff00';
+                countdownNumber.style.textShadow = '0 0 30px #ffff00, 0 0 60px #ffff00, 0 0 90px #ffff00';
+            }
         } else {
             countdownNumber.textContent = 'GO!';
+            countdownNumber.style.color = '#00ff00';
+            countdownNumber.style.textShadow = '0 0 30px #00ff00, 0 0 60px #00ff00, 0 0 90px #00ff00';
             countdownNumber.style.animation = 'countdownGo 0.5s ease-out forwards';
             readyText.style.display = 'none';
 

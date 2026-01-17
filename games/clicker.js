@@ -5,7 +5,7 @@ window.loadClicker = function (el, autoStart = true) {
     el.innerHTML = `
         <div class="game-container glass-card" style="background: rgba(10, 10, 20, 0.95); padding: 20px; border-radius: 20px; border: 1px solid rgba(139, 92, 246, 0.3);">
             <div class="game-instructions" style="margin-bottom: 10px; color: #a78bfa; font-family: 'Orbitron'; font-size: 0.8rem;">
-                HUNT THE NEON DRAGON BEFORE TIME EXPIRES!
+                🎯 DRAGON CLICKER - Hunt the targets, gain the brew!
             </div>
             <div class="game-header" style="display: flex; justify-content: space-between; margin-bottom: 10px; font-family: 'Orbitron'; font-size: 1.1rem;">
                 <span style="color: #6366f1;">SCORE: <span id="gs">0</span></span>
