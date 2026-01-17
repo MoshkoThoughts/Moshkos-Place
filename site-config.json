@@ -1,0 +1,127 @@
+{
+    "site": {
+        "title": "MOSHKO'S - Home",
+        "description": "MOSHKO'S - Epic Games & Minecraft Adventures",
+        "copyright": "© 2026 MOSHKO'S. All rights reserved.",
+        "footerCredits": "Created with 💜 for the Moshko Community"
+    },
+    "navigation": {
+        "home": "Home",
+        "updates": "Updates",
+        "games": "Games",
+        "minecraft": "Minecraft"
+    },
+    "contact": {
+        "title": "🔗 Contact Info",
+        "discord": "Discord",
+        "instagram": "Instagram",
+        "email_general": "moshkosha@gmail.com",
+        "email_events": "moshko@parlagames.co.il",
+        "namemc": "NameMC",
+        "steam": "Steam",
+        "spotify": "Spotify"
+    },
+    "hero": {
+        "title": "Welcome to MOSHKO'S",
+        "subtitle": "The Ultimate Hub for Cosmic Games, Minecraft Packs, and Dragon-Themed Adventures",
+        "btnPlay": "Play Games",
+        "btnExplore": "Explore Minecraft"
+    },
+    "about": {
+        "title": "קצת עלי",
+        "bio": [
+            "בישול ושהייה בים הם הדרכים האהובות עליי להירגע ולהטעין מצברים. התחביבים האלו מעניקים לי את המרחב האישי שבו אני יכול להתמקד בעצמי ולחבר בין שלווה ליצירתיות.",
+            "אני משחק במיינקראפט כבר 12 שנים, וב-4 השנים האחרונות צברתי ניסיון בתפקידי צוות שונים בקהילת הפרלמנטום. כיום אני סגן אחראי בשרת הדיסקורד של הקהילה, אחראי על תכנון אירועים וניהול שוטף.",
+            "בנוסף, אני מתמחה בבנייה וניהול שרתי דיסקורד מקצועיים, כולל עיצוב והתאמה אישית. אני משלב יצירתיות וניהול כדי להביא ערך לקהילות שאני חלק מהן."
+        ]
+    },
+    "quickLinks": {
+        "title": "Explore Moshko's",
+        "updates": {
+            "title": "Latest Updates",
+            "desc": "Stay current with new games, features, and community news"
+        },
+        "games": {
+            "title": "Play Games",
+            "desc": "12 epic games to challenge your skills"
+        },
+        "minecraft": {
+            "title": "Minecraft",
+            "desc": "Custom packs and amazing builds"
+        }
+    },
+    "games": [
+        {
+            "id": "clicker",
+            "icon": "🎯",
+            "title": "Dragon Clicker",
+            "desc": "Hunt the targets, gain the brew!",
+            "btn": "START MISSION"
+        },
+        {
+            "id": "snake",
+            "icon": "🐲",
+            "title": "Cosmic Snake",
+            "desc": "Collect Beer Mugs, grow your tail!",
+            "btn": "START MISSION"
+        },
+        {
+            "id": "2048",
+            "icon": "💎",
+            "title": "Dragon 2048",
+            "done": "Combine brews to reach the Golden Dragon!",
+            "btn": "START MISSION"
+        },
+        {
+            "id": "flappy",
+            "icon": "🦇",
+            "title": "Flappy Dragon",
+            "desc": "Dodge the pipes and reach the nebula!",
+            "btn": "START MISSION"
+        },
+        {
+            "id": "stack",
+            "icon": "📦",
+            "title": "Brew Stack",
+            "desc": "Stack the crates to the stars!",
+            "btn": "START MISSION"
+        },
+        {
+            "id": "race",
+            "icon": "🏎️",
+            "title": "Dragon Wing Race",
+            "desc": "High-speed arcade vector racing!",
+            "btn": "START MISSION"
+        },
+        {
+            "id": "pong",
+            "icon": "🎾",
+            "title": "Beer Pong Galaxy",
+            "desc": "Master the neon cosmic bounce!",
+            "btn": "START MISSION"
+        },
+        {
+            "id": "breath",
+            "icon": "👾",
+            "title": "Dragon Breath",
+            "desc": "Defend the brewery with cosmic fire!",
+            "btn": "START MISSION"
+        }
+    ],
+    "updates": [
+        {
+            "id": 1,
+            "icon": "🚀",
+            "title": "Site Relaunch",
+            "desc": "The new cosmic hub is officially live!",
+            "date": "Jan 10, 2026"
+        },
+        {
+            "id": 2,
+            "icon": "🎮",
+            "title": "New Games Added",
+            "desc": "Treasure Hunt and Bottle Flip are now playable.",
+            "date": "Jan 9, 2026"
+        }
+    ]
+}
