@@ -349,5 +349,11 @@ window.loadBreath = function (el, autoStart = true) {
         canvas.removeEventListener('mousedown', onClick);
     };
 
-    if (autoStart) reset();
+    if (autoStart) {
+        if (typeof window.showGameCountdown === 'function') {
+            window.showGameCountdown(el, reset);
+        } else {
+            reset();
+        }
+    }
 };

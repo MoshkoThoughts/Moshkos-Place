@@ -185,5 +185,11 @@ window.loadFlappy = function (el, autoStart = true) {
         window.removeEventListener('keydown', handleKey);
     };
 
-    if (autoStart) reset();
+    if (autoStart) {
+        if (typeof window.showGameCountdown === 'function') {
+            window.showGameCountdown(el, reset);
+        } else {
+            reset();
+        }
+    }
 };

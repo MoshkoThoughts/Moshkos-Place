@@ -186,5 +186,11 @@ window.loadSnake = function (el, autoStart = true) {
         window.removeEventListener('keydown', onKey);
     };
 
-    if (autoStart) reset();
+    if (autoStart) {
+        if (typeof window.showGameCountdown === 'function') {
+            window.showGameCountdown(el, reset);
+        } else {
+            reset();
+        }
+    }
 };

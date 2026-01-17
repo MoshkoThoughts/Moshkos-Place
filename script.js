@@ -445,6 +445,112 @@ window.loadGame = function (id, autoStart = true) {
     }
 };
 
+/**
+ * GAME COUNTDOWN SYSTEM
+ * Shows a 3-2-1 countdown overlay before starting a game
+ */
+window.showGameCountdown = function (containerEl, onComplete) {
+    // Create countdown overlay
+    const overlay = document.createElement('div');
+    overlay.id = 'game-countdown-overlay';
+    overlay.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        border-radius: 15px;
+    `;
+
+    const countdownNumber = document.createElement('div');
+    countdownNumber.style.cssText = `
+        font-family: 'Orbitron', sans-serif;
+        font-size: 120px;
+        font-weight: bold;
+        color: #00ffff;
+        text-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff, 0 0 90px #8B5CF6;
+        animation: countdownPulse 0.5s ease-in-out;
+    `;
+
+    const readyText = document.createElement('div');
+    readyText.style.cssText = `
+        font-family: 'Orbitron', sans-serif;
+        font-size: 24px;
+        color: #a78bfa;
+        margin-top: 20px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    `;
+    readyText.textContent = 'GET READY';
+
+    overlay.appendChild(countdownNumber);
+    overlay.appendChild(readyText);
+
+    // Add keyframe animation to document if not exists
+    if (!document.getElementById('countdown-keyframes')) {
+        const style = document.createElement('style');
+        style.id = 'countdown-keyframes';
+        style.textContent = `
+            @keyframes countdownPulse {
+                0% { transform: scale(0.5); opacity: 0; }
+                50% { transform: scale(1.2); }
+                100% { transform: scale(1); opacity: 1; }
+            }
+            @keyframes countdownGo {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.5); color: #00ff00; text-shadow: 0 0 50px #00ff00; }
+                100% { transform: scale(2); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    // Find the game container to append the overlay
+    const gameContainer = containerEl.querySelector('.game-container');
+    if (gameContainer) {
+        gameContainer.style.position = 'relative';
+        gameContainer.appendChild(overlay);
+    } else {
+        containerEl.style.position = 'relative';
+        containerEl.appendChild(overlay);
+    }
+
+    let count = 3;
+    countdownNumber.textContent = count;
+
+    const countdownInterval = setInterval(() => {
+        count--;
+        if (count > 0) {
+            countdownNumber.textContent = count;
+            countdownNumber.style.animation = 'none';
+            countdownNumber.offsetHeight; // Trigger reflow
+            countdownNumber.style.animation = 'countdownPulse 0.5s ease-in-out';
+
+            // Change color as countdown progresses
+            if (count === 2) countdownNumber.style.color = '#ff00ea';
+            if (count === 1) countdownNumber.style.color = '#ffff00';
+        } else {
+            countdownNumber.textContent = 'GO!';
+            countdownNumber.style.animation = 'countdownGo 0.5s ease-out forwards';
+            readyText.style.display = 'none';
+
+            setTimeout(() => {
+                overlay.remove();
+                if (typeof onComplete === 'function') {
+                    onComplete();
+                }
+            }, 500);
+            clearInterval(countdownInterval);
+        }
+    }, 1000);
+};
+
 
 
 

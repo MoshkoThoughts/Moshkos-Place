@@ -211,5 +211,11 @@ window.load2048 = function (el, autoStart = true) {
     document.getElementById('restart2048').onclick = initBoard;
 
     window._activeGameCleanup = () => window.removeEventListener('keydown', game2048KeyHandler);
-    if (autoStart) initBoard();
+    if (autoStart) {
+        if (typeof window.showGameCountdown === 'function') {
+            window.showGameCountdown(el, initBoard);
+        } else {
+            initBoard();
+        }
+    }
 };

@@ -176,5 +176,11 @@ window.loadStack = function (el, autoStart = true) {
         canvas.removeEventListener('pointerdown', handleInput);
     };
 
-    if (autoStart) reset();
+    if (autoStart) {
+        if (typeof window.showGameCountdown === 'function') {
+            window.showGameCountdown(el, reset);
+        } else {
+            reset();
+        }
+    }
 };

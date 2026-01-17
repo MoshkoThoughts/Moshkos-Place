@@ -169,7 +169,13 @@ window.loadClicker = function (el, autoStart = true) {
     };
 
     document.getElementById('restartClicker').onclick = reset;
-    if (autoStart) reset();
+    if (autoStart) {
+        if (typeof window.showGameCountdown === 'function') {
+            window.showGameCountdown(el, reset);
+        } else {
+            reset();
+        }
+    }
 
     window._activeGameCleanup = () => {
         if (timerInterval) clearInterval(timerInterval);

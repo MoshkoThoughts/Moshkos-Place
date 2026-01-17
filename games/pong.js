@@ -199,5 +199,11 @@ window.loadPong = function (el, autoStart = true) {
         window.removeEventListener('keyup', keyHandler);
     };
 
-    if (autoStart) reset();
+    if (autoStart) {
+        if (typeof window.showGameCountdown === 'function') {
+            window.showGameCountdown(el, reset);
+        } else {
+            reset();
+        }
+    }
 };
