@@ -700,8 +700,8 @@ function populateGamesGrid() {
 
     const title = document.getElementById('dynGamesTitle');
     const subtitle = document.getElementById('dynGamesSubtitle');
-    if (title) title.textContent = "🎮 Moshko Games";
-    if (subtitle) subtitle.textContent = "Choose your cosmic adventure and play!";
+    if (title) title.textContent = "Moshko's Games";
+    if (subtitle) subtitle.textContent = "Play a game and enjoy my site!";
 
     container.innerHTML = window.siteConfig.games.map((game, i) => `
         <div class="game-card glass-card" data-aos="zoom-in" data-aos-delay="${i * 50}" data-game="${game.id}">
