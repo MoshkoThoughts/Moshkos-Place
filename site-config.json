@@ -2,8 +2,8 @@
     "site": {
         "title": "MOSHKO'S - Home",
         "description": "MOSHKO'S - Epic Games & Minecraft Adventures",
-        "copyright": "© 2026 MOSHKO'S. All rights reserved.",
-        "footerCredits": "Created with 💜 for the Moshko Community"
+        "copyright": "© MOSHKO'S - All rights reserved.",
+        "footerCredits": "Created Bט Moshko"
     },
     "navigation": {
         "home": "Home",
@@ -43,7 +43,7 @@
         },
         "games": {
             "title": "Play Games",
-            "desc": "12 epic games to challenge your skills"
+            "desc": "8 epic games to challenge your skills"
         },
         "minecraft": {
             "title": "Minecraft",
